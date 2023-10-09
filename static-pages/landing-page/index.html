@@ -6,72 +6,704 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <meta name="keywords"
-        content="solar energy, renewable energy, solar power, sustainable solutions, green technology, photovoltaic systems, solar panel installation, energy efficiency, clean energy, solar solutions, residential solar, commercial solar, solar financing options, solar maintenance, solar consultation,inverter,mopower,pelton batteries nigeria">
+        content="">
     <meta name="description"
-        content="Kayglo Citadel is a leading solar company providing sustainable energy solutions through expert installation of solar panel systems for residential and commercial buildings. We offer maintenance services, financing options, and expert solar consultation. Go green with Kayglo Citadel!">
-    <link rel="stylesheet" href="./assets/css/style.css">
+        content="">
+    <link rel="stylesheet" href="assets/css/Landing-Page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f0bfa4a648.js" crossorigin="anonymous"></script>
     <script src="assets/js/tailwindcss.js"></script>
-    <title>fort protectorate - security company</title>
+    <title>TaskFlow Solutions - Dev Company</title>
+
 </head>
 
-<body class="overflow-x-hidden">
-    <header class="h-[100vh] w-[100vw]" style="background: linear-gradient(130deg, #1F8058 -26.2%, #0D4A31 64.1%);
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);  ">
-        <nav class=""></nav>
-        <h1 class="text-white font-bold text-5xl leading-normal">Comprehensive Protection Solutions for Your Peace of
-            Mind</h1>
-        <p class="text-white text-lg">Welcome to Fort Protectorate, where the mixture of security excellence meets the
-            art of protection. Step into a realm of safety where our commitment to diversity and cutting-edge technology
-            combines, offering you a harmony of peace and vigilance that you can trust</p>
-        <button class="bg-[#F8C140] py-4 px-8 rounded-xl font-bold">Get Started</button>
-    </header>
-    <section class="">
-        <h2 class="font-bold text-6xl text-center my-20">About Us</h2>
-        <div class="min-[1200px]:mr-10 flex ">
-            <img src="../landing-page/assets/images/about-img.svg" alt="" class="w-[60%]">
-            <div class="min-[1200px]:w-[60%] max-w-2xl mt-5">
-                <p class="text-2xl text-[#797979] leading-9 mb-8 ">At Fort Protectorate, we're a strong defender of security. With extensive experience and a focus
-                    on diversity, inclusivity, and excellence, we're devoted to protecting communities, properties, and
-                    events.</p>
-                <p class="text-2xl text-[#797979] leading-9">At the core of our success is a comprehensive range of services tailored to meet the diverse
-                    needs of our clients. From the installation of advanced security technology, including smart cameras and
-                    integrated systems, to the strategic deployment of trained security personnel, we offer holistic
-                    solutions that go beyond conventional practices.</p>
-            </div>
-            </div>
-    </section>
-    <section class="my-24">
-        <div class="flex flex-col items-center" >
-            <p class="  text-lg bg-[#ECFFF4] text-[#088D51] rounded-[35px] w-fit px-6 py-4 font-bold">Why Us</p>
-            <h3 class="  text-6xl font-bold py-7">Why Choose Fort Protectorate</h3>
-            <p class="  text-[#797979]  text-2xl max-w-lg text-center leading-10">Discover Why We Are the Definitive Choice for Comprehensive Security Solutions</p>
+<body class="text-black font-[Manrope]">
+    <div id="register-overlay"></div>
+
+    <div id="register-modal">
+        <span class="close2">&times;</span>
+
+        <button class="google-btns">
+            <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google Logo">
+            Continue with Google
+        </button>
+        <p class="my-6 text-sm text-center">or</p>
+        <h2 class="text-center my-4 text-2xl font-bold">Register</h2>
+        <div id="form">
+            <form onSubmit="handleRegister()">
+                <input type="text" id="reg-nameInput" required placeholder="Full Name"
+                    class="h-12 my-2 border-2 border-gray-800 rounded-md indent-6">
+                <input type="email" id="reg-emailInput" required placeholder="Email"
+                    class="h-12 my-2 border-2 border-gray-800 rounded-md indent-6">
+                <input type="password" id="reg-passwordInput" required placeholder="Password"
+                    class="h-12 my-2 border-2 border-gray-800 rounded-md indent-6">
+                <button id="reg-submitBtn">Create Account</button>
+            </form>
         </div>
-        <div class="mt-16 flex justify-center">
-            <div class="max-w-sm hover:bg-[#F9F9F9] rounded-2xl px-3 py-4 w-[30%]">
-                <img src="../landing-page/assets/icons/cctv.svg" alt="" class="mx-auto">
-                <p class="font-bold text-3xl text-center my-8 leading-10 ">Advanced Security Solutions</p>
-                <p class="  text-[#797979] leading-8 text-xl text-center">We specialize in installing advanced security cameras, gadgets, and systems that utilize state-of-the-art technology for real-time monitoring and strong protection.</p>
+    </div>
+    <div id="login-overlay"></div>
+
+    <div id="login-modal">
+        <span class="close">&times;</span>
+
+        <button class="google-btns">
+            <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google Logo">
+            Continue with Google
+        </button>
+
+        <p class="my-6 text-sm text-center">or</p>
+        <h2 class="text-center my-4 text-2xl font-bold">Sign In</h2>
+        <div id="form">
+            <form onSubmit="handleLogin()">
+                <input type="email" id="log-emailInput" required placeholder="Email"
+                    class="h-12 my-2 border-2 border-gray-800 rounded-md indent-6">
+                <input type="password" id="log-passwordInput" required placeholder="Password"
+                    class="h-12 my-2 border-2 border-gray-800 rounded-md indent-6">
+                <button id="log-submitBtn">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="nav">
+        <a href="" class="logo max-[800px]:w-[7vw] max-[800px]:justify-start"><img src="assets/images/Taskflow-Icon.svg" /></a>
+        <p class="text-[#156064] max-[800px]:mr-1 font-extrabold max-[800px]:text-[5vw]">TASKFLOW SOLUTIONS</p>
+        <div class="page-links">
+            <a href="">Home</a>
+
+            <a href="/dashboard" id="dash">Dashboard</a>
+            <a href="/product" id="product">Products</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#contact">Contact</a>
+            <button id="sign-out-btn">Sign Out</button>
+        </div>
+        <div class="auth-links" id="login-links">
+            <button class="login">Login</button>
+            <button class="register">Register</button>
+        </div>
+        <div id="userInitials"></div>
+        <div className="profile" id="profile">
+            <a href="dashboard/profile" className="flex items-center max-[1100px]:pr-3">
+                <img id="profile-pic" src="" alt=""
+                    className="w-14 h-14 max-[1100px]:w-10 max-[1100px]:h-10 max-[850px]:hidden " />
+                <p className="font-semibold pl-3.5 max-[1100px]:hidden" id="profile-name">
+                    bola kolawole
+                </p>
+            </a>
+        </div>
+
+        <button class="nav-btn max-[800px]:w-[13vw] max-[800px]:h-[13vw] border-none"><img src="assets/images/gg_menu-left-alt.svg"></button>
+    </div>
+
+    <div class="side-nav">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Why Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+    </div>
+
+    <div class="showcase">
+        <img src="assets/images/Union-Background.svg" class="max-[800px]:my-2 max-[800px]:pt-[45vw]">
+        <h1 class="text-[#156064]">Building a Bridge between Companies <section class="font-bold">and Technology</h1>
+        <p class="text-black max-[800px]:w-[60vw]">We help businesses transition from analog to digital by building custom software solutions that drive growth.</p>
+        <div class="flex max-[800px]:my-[4vw] mx-auto justify-between">
+            <button class="bg-[#156064] justify-start text-left max-[800px]:p-[2vw] max-[800px]:mx-10"><a class="text-white" href="/product">Get Started</a></button>
+            <button class="bg-white max-[800px]:p-[3vw] pl-[6vw] border-2 mx-1"><a class="text-black" href="/product">Explore</a></button>  
+        </div>
+    </div>
+
+    <div class="max-[800px]:mt-[70vw] bg-[#F1F1F1] justify-center">
+        <p class="text-center max-[800px]:p-[9vw] font-[#031745]">TRUSTED BY COMPANIES</p>
+        <div class="font-[#666666] max-[800px]:inline-flex">
+            <img src="assets/images/kg-logo.svg" class="">
+            <p>Kayglo Citadel</p>
+            <img src="assets/images/sadok-organics-1.svg">
+            <p>Sadok Organic Farms</p>
+            <img src="assets/images/famous-pork-1.svg">
+            <p>Famous Pork</p>
+        </div>
+    </div>
+    <div>
+        <p class="max-[800px]:text-[14px]  max-[800px]:text-center max-[800px]:mt-[40vw]">OUR SERVICES</p>
+        <p class="max-[800px]:text-[30px]  max-[800px]:text-center max-[800px]:mt-[10vw] max-[800px]:w-[80vw] max-[800px]:m-[9.5vw] font-extrabold">Using The Best Resources to Improve Your Business</p>
+    </div>
+    
+        <div class="flex partners-statistics max-[900px]:w-[100vw] mt-[2rem] p-[10vw] max-[800px]:space-between max-[800px]:gap-8 items-center text-center max-[800px]:justify-center">
+            <div class="ps users border-2 rounded-xl p-[12vw]">
+                <div class="rounded-[1vw] max-[800px]:p-[1vw] max-[800px]:w-[10vw] max-[800px]:h-[9vw]  bg-[#ECECEC]"><img src="assets/images/mdi_web.svg"></div>
+                <div class="info">
+                    <h4 class="text-lg font-bold text-left">Web Development</h4>
+                    <p>40 options available</p>
+                </div>
             </div>
-            <div class="max-w-sm hover:bg-[#F9F9F9] rounded-2xl px-3 py-4 w-[30%] mx-[5%]">
-                <img src="../landing-page/assets/icons/training.svg" alt="" class="mx-auto">
-                <p class="font-bold text-3xl text-center my-8 leading-10 ">Advanced Security Solutions</p>
-                <p class="  text-[#797979] leading-8 text-xl text-center">We specialize in installing advanced security cameras, gadgets, and systems that utilize state-of-the-art technology for real-time monitoring and strong protection.</p>
+            <div class="ps users border-2 rounded-xl p-[12vw]">
+                <div class="rounded-[1vw] max-[800px]:p-[1vw] max-[800px]:w-[10vw] max-[800px]:h-[9vw] bg-[#ECECEC]"><img src="assets/images/vector-pen.svg"></div>
+                <div class="info">
+                    <h4 class="text-lg font-bold text-left">UI/UX Development</h4>
+                    <p>13 options available</p>
+                </div>
             </div>
-            <div class="max-w-sm hover:bg-[#F9F9F9] rounded-2xl px-3 py-4 w-[30%]">
-                <img src="../landing-page/assets/icons/certificate.svg" alt="" class="mx-auto">
-                <p class="font-bold text-3xl text-center my-8 leading-10 ">Advanced Security Solutions</p>
-                <p class="  text-[#797979] leading-8 text-xl text-center">We specialize in installing advanced security cameras, gadgets, and systems that utilize state-of-the-art technology for real-time monitoring and strong protection.</p>
+            <div class="ps users border-2 rounded-xl p-[12vw]">
+                <div class="rounded-[1vw] max-[800px]:p-[1vw] max-[800px]:w-[10vw] max-[800px]:pb-[9vw] max-[800px]:h-[9vw] bg-[#ECECEC]"><img src="assets/images/ui-checks-grid.svg" class="max-[800px]:w-[14vw]"></div>
+                <div class="info">
+                    <h4 class="text-lg font-bold text-left">Automation & Workflow Systems</h4>
+                    <p>30 options available</p>
+                </div>
+            </div>
+            <div class="ps users border-2 rounded-xl p-[12vw]">
+                <div class="rounded-[1vw] max-[800px]:p-[1vw] max-[800px]:w-[10vw] max-[800px]:h-[9vw] bg-[#ECECEC]"><img src="assets/images/solar_database-bold-duotone.svg"></div>
+                <div class="info">
+                    <h4 class="text-lg font-bold text-left">Database Management</h4>
+                    <p>30 options available</p>
+                </div>
+            </div>
+            <div class="ps users border-2 rounded-xl p-[12vw]">
+                <div class="rounded-[1vw] max-[800px]:p-[1vw] max-[800px]:w-[10vw] max-[800px]:h-[9vw] bg-[#ECECEC]"><img src="assets/images/nimbus_marketing.svg"></div>
+                <div class="info">
+                    <h4 class="text-lg font-bold text-left">SEO & Marketing</h4>
+                    <p>30 options available</p>
+                </div>
+        </div>
+        <div class="ps users border-2 rounded-xl w-[80vw] p-[12vw] bg-[#156064] text-white text-center">
+            <div class="info">
+                <h4 class="text-lg font-bold text-left text-white">More Options</h4>
+                <p class="flex">7+ options available</p>
+            </div>
+    </div>
+
+    <div class="bg-[#F8FAFD] max-[800px]:mt-[16vw] max-[800px]:p-[13vw]" id="why-us">
+        <p class="rounded-md bg-[#E6F0FA] max-[800px]:font-[20px] p-[4vw] text-[#8599AA] font-medium">Our Latest Project</p>
+
+        <div class="max-w-4xl why-us-content">
+            <p class="max-[800px]:text-[29px] font-extrabold max-[800px]:mt-[5vw]">Project Delta</p>
+            <p class="max-[800px]:w-[87vw]">Multiple listening columns help you stay tuned to everything that's relevant. 
+                Respond in real-time and engage with your audience as often as you like.</p>
+
+    <div class="feature-section">
+        <h1 class="mt-6 text-center sm:text-lg md:text-3xl">Key Features</h1>
+        <div class="features">
+            <div class="grid grid-cols-2 featureItem">
+                <div class="featureText">
+                    <h2 class="">Renewable and Reliable Power Supply </h2>
+                    <p class="first-one">Solar energy is a sustainable source of energy because it is derived from the
+                        sun, which is a virtually limitless resource.
+                    </p>
+                </div>
+                <div>
+                    <div class="featureImage">
+                        <img class="house" src="./assets/images/Reliable Energy.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid grid-cols-2 featureItem">
+                <div>
+                    <div class="featureImage">
+                        <img src="./assets/images/Savings-bro 1.png" alt="">
+
+                    </div>
+                </div>
+
+                <div class="featureText">
+                    <h2>Cost-Effective</h2>
+                    <p>Solar energy can be a cost-effective source of energy, particularly in areas with abundant
+                        sunshine, as it requires little to no fuel to generate electricity and has minimal ongoing
+                        maintenance costs.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 featureItem">
+                <div class="featureText">
+                    <h2>Clean energy </h2>
+                    <p>Solar energy is a clean and non-polluting source of energy, as it does not emit any harmful
+                        greenhouse gases or pollutants during the generation process.</p>
+                </div>
+                <div>
+                    <div class="featureImage">
+                        <img src="./assets/images/Air pollution-amico 1.png" alt="">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid grid-cols-2 featureItem">
+                <div>
+                    <div class="featureImage">
+                        <img src="./assets/images/Sun energy-pana 1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="featureText">
+                    <h2>Product Maintenance</h2>
+                    <p>Solar energy can be used in a variety of applications, including residential, commercial, and
+                        industrial settings, as well as in off-grid applications such as remote homes and vehicles.</p>
+                </div>
             </div>
         </div>
-    </section>
-    <section>
-        <div class="flex flex-col items-center" >
-            <p class="  text-lg bg-[#ECFFF4] text-[#088D51] rounded-[35px] w-fit px-6 py-4 font-bold">Testimonials</p>
-            <h3 class="  text-6xl font-bold py-7">What Our Happy Clients Say About Us</h3>
+    </div>
+
+    <section id="about">
+        <div class="about">
+            <div class="about-header">
+                <h1 class="my-20 font-bold text-center sm:text-lg md:text-3xl">About Us</h1>
+            </div>
+
+            <div class="grid grid-cols-2 para">
+                <!-- <<<<<<< Updated upstream:landing-Page/Landing-page-key-feautres-section/index.html -->
+                <div data-aos="fade-up-right" class="order-1">
+                    <div class="order-1 text-lg font-medium about-text">
+                        <p>Welcome to <span> Kayglo Citadel</span>, where we provide top-notch solar solutions to
+                            residential and commercial clients. Our company was founded on the belief that sustainable
+                            energy is the future, and we strive to make a positive impact on the environment by helping
+                            our clients reduce their carbon footprint.</p>
+                        <p>At Kayglo Citadel, we are dedicated to providing our clients with the highest quality solar
+                            products and services. Our team of experts has years of experience in the solar industry,
+                            and we pride ourselves on our commitment to customer satisfaction.</p>
+                        <p>We offer a wide range of solar solutions, including solar panel installation, maintenance,
+                            and repair. Our team works closely with clients to design customized solar systems that meet
+                            their unique energy needs and budget.</p>
+                    </div>
+                </div>
+                <div class="order-2 about-image">
+                    <img class="image-one" src="./assets/images/Polygon 4.png" alt="">
+                    <!-- >>>>>>> Stashed changes:Landing-page/Landing-page:key feautres section/index.html -->
+                    <div class="flex justify-between">
+                        <img class="image-two" src="./assets/images/Polygon 5.png" alt="">
+                        <img class="image-three" src="./assets/images/Polygon 6.png" alt="">
+                    </div>
+                    <img class="image-four" src="./assets/images/Polygon 7.png" alt="">
+                </div>
+
+                <img src="./assets/images/shapes.png" class="about-sm" />
+            </div>
+
+
         </div>
 
     </section>
+
+    <section class="p-4 redirect-product">
+        <div class="max-w-lg mx-auto mb-4 redirect-productText">
+            <h2 class="mb-4 text-4xl font-bold">See which <span>system</span> works for your best for you</h2>
+            <p>Use our load calculator to understand the amout of power you consume and which inverter system would work
+                best for you</p>
+        </div>
+        <div>
+            <img src="./assets/images/Product Preview 2.png" alt="">
+        </div>
+        <div class="redirect-btn">
+            <a href="">Browse Product Page</a>
+        </div>
+
+
+    </section>
+
+    <section class="FAQ">
+        <div class="FAQ-header">
+            <h1 class="my-8 text-3xl font-bold">Frequently Asked Questions</h1>
+        </div>
+        <div class="flex  justify-around pb-10 mt-20 align-middle FAQ-sec">
+            <div>
+                <img src="./assets/images/FAQs-amico 1.png" class="w-96">
+            </div>
+            <div class="py-2 overflow-y-scroll faq-content">
+                <div class="FAQ-text">
+                    <div class="flex justify-between text">
+                        <h1>How can Taskflow improve collaboration?</h1><button class="add-b"><i
+                                class="fa-solid fa-plus "></i></button>
+                    </div>
+                    <p id="first-text">TaskFlow improves collaboration by allowing team members to work together more
+                        efficiently. It provides transparency and accountability by showing who is responsible for each
+                        task, and it enables team members to easily communicate and collaborate on tasks.</p>
+                </div>
+                <div class="FAQ-text">
+                    <div class="flex justify-between text">
+                        <h1>How can Taskflow improve collaboration?</h1><button class="add-bt"><i
+                                class="fa-solid fa-plus "></i></button>
+                    </div>
+                    <p id="second-text">TaskFlow improves collaboration by allowing team members to work together more
+                        efficiently. It provides transparency and accountability by showing who is responsible for each
+                        task, and it enables team members to easily communicate and collaborate on tasks.</p>
+                    <!-- <p></p>  -->
+                </div>
+                <div class="FAQ-text">
+                    <div class="flex justify-between text">
+                        <h1>How can Taskflow improve collaboration?</h1><button class="add-btns"><i
+                                class="fa-solid fa-plus "></i></button>
+                    </div>
+                    <p id="third-text">TaskFlow improves collaboration by allowing team members to work together more
+                        efficiently. It provides transparency and accountability by showing who is responsible for each
+                        task, and it enables team members to easily communicate and collaborate on tasks.</p>
+                    <!-- <p ></p> -->
+                </div>
+                <div class="FAQ-text">
+                    <div class="flex justify-between text">
+                        <h1>How can Taskflow improve collaboration?</h1><button class="add-btn"><i
+                                class="fa-solid fa-plus "></i></button>
+                    </div>
+                    <p id="last-text">TaskFlow improves collaboration by allowing team members to work together more
+                        efficiently. It provides transparency and accountability by showing who is responsible for each
+                        task, and it enables team members to easily communicate and collaborate on tasks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="contact">
+        <div>
+            <div class="contact-header">
+                <h2>Contact Us</h2>
+                <h5>Any Questions or Remarks? Just Write to us!</h5>
+            </div>
+            <div class="flex contact-form ">
+                <div class="contactInfoText">
+                    <h2>Contact Information</h2>
+                    <h5>Fill in the forms and our team will get back to you within 24hrs</h5>
+                    <div class="contactInfo">
+                        <div class="flex"><i class="fa-solid fa-phone"></i> <p>+2348 0987 65432</p></div>
+                        <div class="flex "><i class="fa-solid fa-envelope"></i><p>kayglocitadel@gmail.com</p></div>
+                        <div class="flex"><i class="fa-solid fa-location-dot"></i><p>10, Lorem Amet Street</p></div>
+                    </div>
+                    <div class="flex contact-social">
+                        <div class="flex contact-socials">
+                            <img src="/Landing-page/Landing-page-key-feautres-section/asset/images/Vector.png" alt="">
+                            <img src="/Landing-page/Landing-page-key-feautres-section/asset/images/twitter.png" alt="">
+                            <img src="/Landing-page/Landing-page-key-feautres-section/asset/images/ig.png" alt="">
+                            <img src="/Landing-page/Landing-page-key-feautres-section/asset/images/Ldkn.png" alt="">
+                        </div>
+                        
+                        <div class="shapes">
+                            <img class="circle" src="/Landing-page/Landing-page-key-feautres-section/asset/images/Ellipse 36.png" alt="">
+                            <img class="one" src="/Landing-page/Landing-page-key-feautres-section/asset/images/Ellipse 35.png" alt="">
+                        </div>
+                    </div>
+                   
+                </div>
+                <form action="#" class="flex flex-wrap">
+                  <label for="fname">First Name<input type="text" id="fname"></label>
+                  
+                  <label for="lname">Last Name <input type="text" id="lname"></label>
+                 
+                  <label for="mail">Mail <input type="text" id="mail"></label>
+                 
+                  <label for="phone">Phone  <input type="text" id="phone"></label>
+                
+                  <label for="msg">Message<input type="textarea" id="msg"></label>
+                  
+                  <input type="submit" value="Send Message">
+    
+                </form>
+    
+            </div>
+        </div>
+    
+    </section> -->
+
+    <div class="grid grid-cols-3 gap-8 p-20 bg-green-50 footer">
+        <div class="logo-sec"><img src="./assets/images/Logo.svg" class="w-72" /></div>
+        <div class="link link1">
+            <h3 class="text-lg font-bold text-gray-400">Products</h3>
+            <a href="">Why kayglo citadel</a>
+            <a href="">Integrations</a>
+            <a href="">Load calculator</a>
+            <a href="">Support</a>
+        </div>
+        <div class="link link2">
+            <h3 class="text-lg font-bold text-gray-400">Solutions</h3>
+            <a href="">Marketing</a>
+            <a href="">Sales</a>
+            <a href="">Finance</a>
+            <a href="">Operations</a>
+        </div>
+    </div>
+
+    <div class="p-4 text-center powered">
+        <h3 class="mb-2">© 2023 - Kayglo Citadel. All Rights Reserved</h3>
+        <p>Powered by <a href="http://www.taskflowsolution.com" target="_blank"
+                class="text-lg font-bold text-blue-700">TaskFlow Solutions</a></p>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script>
+        AOS.init();
+        document.addEventListener('DOMContentLoaded', function () {
+            var navBtn = document.querySelector('.nav-btn');
+            var sideNav = document.querySelector('.side-nav');
+
+            navBtn.addEventListener('click', function () {
+                sideNav.classList.toggle('open');
+            });
+        });
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDRHWTaYbaS01ZRyQjp-6Sdz0txLBAOpoQ",
+            authDomain: "work-flow-engine.firebaseapp.com",
+            databaseURL: "https://work-flow-engine-default-rtdb.firebaseio.com",
+            projectId: "work-flow-engine",
+            storageBucket: "work-flow-engine.appspot.com",
+            messagingSenderId: "397962480634",
+            appId: "1:397962480634:web:307add4c9dc07dc1ed3243",
+            measurementId: "G-7RNH9LJ4WL"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        let userProfile = {
+            name: "",
+            email: "",
+            pic: ""
+        }
+        var loginBtn = document.querySelector('.login');
+        var registerBtn = document.querySelector('.register');
+        var overlay = document.getElementById('login-overlay');
+        var modal = document.getElementById('login-modal');
+        var overlay2 = document.getElementById('register-overlay');
+        var modal2 = document.getElementById('register-modal');
+        var closeBtn = document.querySelector('.close');
+        var closeBtn2 = document.querySelector('.close2');
+
+        var googleBtns = document.getElementsByClassName('google-btns');
+
+        for (var i = 0; i < googleBtns.length; i++) {
+            var googleBtn = googleBtns[i];
+            googleBtn.addEventListener('click', function () {
+                var provider = new firebase.auth.GoogleAuthProvider();
+                firebase.auth().signInWithPopup(provider).then(function (result) {
+                    var user = result.user;
+                    console.log('User:', user);
+                    // alert("Authentication Succesful")
+                    userProfile.pic = result.user.photoURL;
+                    userProfile.name = result.user.displayName;
+                    userProfile.email = result.user.email;
+                    changeNav("login")
+                })
+                    .catch(function (error) {
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        console.error('Error:', errorCode, errorMessage);
+                    });
+            });
+        }
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                userProfile.pic = user.photoURL;
+                userProfile.name = user.displayName;
+                userProfile.email = user.email;
+                changeNav("login")
+                // Use the user's info in your application
+            } else {
+                // User is signed out, handle accordingly
+            }
+        });
+
+        function getInitials(fullName) {
+            const names = fullName.split(' ');
+            let initials = '';
+
+            for (let i = 0; i < names.length; i++) {
+                const name = names[i].trim();
+                if (name !== '') {
+                initials += name[0].toUpperCase();
+                }
+            }
+
+            return initials;
+        }
+
+
+        function changeNav(state) {
+            if (state == "login") {
+                document.getElementById('login-links').style.display = "none"
+                document.getElementById('login-overlay').style.display = "none"
+                document.getElementById('login-modal').style.display = "none"
+                document.getElementById("profile-pic").src = userProfile.pic
+                document.getElementById("profile-name").innerText = userProfile.name 
+                document.getElementById('profile').style.display = "block"
+                document.getElementById('product').style.display = "none"
+                document.getElementById('dash').style.display = "block"
+                document.getElementById('sign-out-btn').style.display = "block"
+                const currentUser = firebase.auth().currentUser;
+                const providerData = currentUser.providerData;
+
+                if (providerData && providerData.length > 0) {
+                const provider = providerData[0].providerId;
+                
+                if (provider === 'password') {
+                    console.log('User authenticated with email and password');
+                    document.getElementById("profile-pic").style.display = "none";
+                    document.getElementById('userInitials').style.display = "block";
+                    firebase.firestore().collection('users').doc(currentUser.uid).get()
+                    .then((doc) => {
+                        if (doc.exists) {
+                            const fullName = doc.data().fullName;
+                            document.getElementById("profile-name").innerText = fullName;
+                            userProfile.name = fullName;
+                            const initials = getInitials(fullName);
+                            document.getElementById('userInitials').textContent = initials;
+                        } else {
+                            console.error('No document found for the user');
+                        }
+                    })
+                } else if (provider === 'google.com') {
+                    document.getElementById("profile-pic").style.display = "block";
+                    console.log('User authenticated with Google');
+                    document.getElementById('userInitials').style.display = "none";
+                } else {
+                    console.log('User authenticated with a different method');
+                }
+            } else {
+                console.log('No provider data available');
+            }
+            
+        } else if (state == "signout") {
+            document.getElementById('sign-out-btn').style.display = "none"
+            userProfile = {
+                    name: "",
+                    email: "",
+                    pic: ""
+                };
+                document.getElementById('profile').style.display = "none"
+                document.getElementById('login-links').style.display = "block"
+                document.getElementById('dash').style.display = "none"
+                document.getElementById('product').style.display = "block"
+                document.getElementById('userInitials').style.display = "none"
+                document.getElementById('userInitials').textContent = "";
+                console.log('signout')
+                console.table(userProfile)
+            }
+
+        }
+
+        var logEmailInput = document.getElementById('log-emailInput');
+        var logPasswordInput = document.getElementById('log-passwordInput');
+        var logSubmitBtn = document.getElementById('log-submitBtn');
+
+        function handleLogin() {
+            event.preventDefault();
+
+            var email = logEmailInput.value;
+            var password = logPasswordInput.value;
+
+            firebase.auth().signInWithEmailAndPassword(email, password).then(function (result) {
+                alert("Sign in successful!");
+                window.location.href = '/user/dashboard';
+                const userId = result.user.uid;
+                firebase.firestore().collection('users').doc(userId).set({
+                    fullName: fullName
+                }).then(function() {
+                    alert('Registration Successful');
+                    overlay2.style.display = 'none';
+                    modal2.style.display = 'none';
+                    userProfile.name = fullName;
+                    changeNav("login")
+                })
+            }).catch(function (error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    if (errorCode === "auth/wrong-password") {
+                        alert('Incorrect password');
+                    }
+                    else if (errorCode === "auth/user-not-found") {
+                        alert('User Not Found');
+                    }
+                    console.error('Error:', errorCode, errorMessage);
+            });
+        }
+
+        var regNameInput = document.getElementById('reg-nameInput');
+        var regEmailInput = document.getElementById('reg-emailInput');
+        var regPasswordInput = document.getElementById('reg-passwordInput');
+        var regSubmitBtn = document.getElementById('reg-submitBtn');
+
+        function handleRegister() {
+            event.preventDefault();
+
+            var email = regEmailInput.value;
+            var password = regPasswordInput.value;
+            var fullName = regNameInput.value;
+
+            firebase.auth().createUserWithEmailAndPassword(email, password).then(function(userCredential) {
+                const userId = userCredential.user.uid;
+                firebase.firestore().collection('users').doc(userId).set({
+                    fullName: fullName
+                }).then(function() {
+                    alert('Registration Successful');
+                    overlay2.style.display = 'none';
+                    modal2.style.display = 'none';
+                    userProfile.name = fullName;
+                    changeNav("login")
+                })
+                .catch(function(error) {
+                    console.error('Error creating user document:', error);
+                });
+            })
+            regEmailInput.value = '';
+            regNameInput.value = "";
+            regPasswordInput.value = '';
+        }
+        //////////////////sign out /////////////////
+        const signOutBtn = document.getElementById("sign-out-btn");
+
+        signOutBtn.addEventListener("click", function () {
+            firebase.auth().signOut().then(function () {
+                changeNav("signout")
+                console.log("Sign-out successful.")
+            }).catch(function (error) {
+                console.log("An error happened!")
+                console.log(error.message)
+            });
+        });
+
+        loginBtn.addEventListener('click', function () {
+            overlay.style.display = 'block';
+            modal.style.display = 'block';
+        });
+
+        registerBtn.addEventListener('click', function () {
+            overlay2.style.display = 'block';
+            modal2.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', function () {
+            overlay.style.display = 'none';
+            modal.style.display = 'none';
+        });
+
+        closeBtn2.addEventListener('click', function () {
+            overlay2.style.display = 'none';
+            modal2.style.display = 'none';
+        });
+
+        overlay.addEventListener('click', function () {
+            overlay.style.display = 'none';
+            modal.style.display = 'none';
+        });
+
+        overlay2.addEventListener('click', function () {
+            overlay2.style.display = 'none';
+            modal2.style.display = 'none';
+        });
+
+    </script>
+    <script src="./assets/js/index.js"></script>
+
+
 </body>
 
 </html>
