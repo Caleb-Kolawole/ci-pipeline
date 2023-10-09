@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "taskflow-soutions"
-  }
+  },
+  "targets": {
+    "taskflow-soutions": {
+      "hosting": {
+        "app": [
+          "task-flow-solutions-app"
+        ],
+        "landing": [
+          "taskflow-soutions"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
