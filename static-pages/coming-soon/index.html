@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <link rel="shortcut icon" href="assets/images/kg-logo.svg" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="sadok organics farm Coming Soon page">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- <script src="../coming-soon/assets/js/tailwindcss.js"></script> -->
+
+  <title>Sadok Organic Farms</title>
+</head>
+
+<body class="">
+  <!-- Note: If you want the popup to show and the auth to work, ensure you are serving at e.g localhost:5500 not 127.0.0.1:5500-->
+  <!-- NAVBAR -->
+  <div class="nav-bar">
+    <a class="logo" href="">
+      <img src="assets/images/logo.svg">
+      <p class="logo-text">Sadok Organic Farms</p>
+    </a>
+  </div>
+  <section class="main">
+    <h1>Coming Soon</h1>
+    <h2 class="leading-6">Be the first to know when our website is live and ready to use. Stay Tuned!!!</h2>
+    <div class="socials">
+      <p class="social_text">You can also follow us on</p>
+      <div class="social-icons">
+        <a href=""><img class="icon-img" src="./assets/icon/Facebook.svg" alt=""></a>
+        <a href=""><img class="icon-img" src="./assets/icon/Twitter.svg" alt=""></a>
+        <a href=""><img class="icon-img" src="./assets/icon/Snapchat.svg" alt=""></a>
+        <a href=""><img class="icon-img" src="./assets/icon/email.svg" alt=""></a>
+        <a href=""><img class="icon-img" src="./assets/icon/Instagram.svg" alt=""></a>
+        <a href=""><img class="icon-img" src="./assets/icon/whatsapp.svg" alt=""></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="devices-image">
+    <img src="assets/images/phone.svg" class="image2">
+    <img src="assets/images/laptop.svg" class="image1">
+  </div>
+
+  <section class="footer">
+    <!-- <h3>Get notified when our site is <span class="live green">live !!</span></h3>
+    <button class="g-signin2 get-notified" id="google-btn">
+      <img src="assets/images/Google-Logo.svg" alt="Google Logo">
+      Continue with Google
+    </button> -->
+    <h5 class="powered">
+      <a href="https://taskflow.solutions" target="_blank">Designed by <span class="green">Taskflow solutions</span></a>
+    </h5>
+    <div class="timer">
+      <p id="countdown"></p>
+      <div class="parent">
+        <p class="number" id="day"></p>
+        <p class="text">Days</p>
+      </div>
+      <div class="parent">
+        <p class="number" id="hour"></p>
+        <p class="text">Hours</p>
+      </div>
+      <div class="parent">
+        <p class="number" id="minute"></p>
+        <p class="text">Minutes</p>
+      </div>
+      <div class="parent">
+        <p class="number" id="second"></p>
+        <p class="text">Seconds</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="decor_container">
+    <img class="decor1 decor" src="assets/images/decor-circle.svg" alt="">
+    <img class="decor2 decor" src="assets/images/decor-diamond.svg" alt="">
+    <img class="decor3 decor" src="assets/images/decor-triangle-2.svg" alt="">
+    <img class="decor4 decor" src="assets/images/decor-diamond.svg" alt="">
+    <img class="decor5 decor" src="assets/images/decor-triangle.svg" alt="">
+  </div> -->
+
+  <div class="overlay">
+    <div class="popup">
+      <img src="assets/images/verified.png" />
+      <h2>Email Received</h2>
+      <p>Be Rest Assured you will be notified when our website is ready.</p>
+    </div>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDRHWTaYbaS01ZRyQjp-6Sdz0txLBAOpoQ",
+      authDomain: "work-flow-engine.firebaseapp.com",
+      databaseURL: "https://work-flow-engine-default-rtdb.firebaseio.com",
+      projectId: "work-flow-engine",
+      storageBucket: "work-flow-engine.appspot.com",
+      messagingSenderId: "397962480634",
+      appId: "1:397962480634:web:307add4c9dc07dc1ed3243",
+      measurementId: "G-7RNH9LJ4WL"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    var provider = new firebase.auth.GoogleAuthProvider();
+
+    document.getElementById("google-btn").addEventListener("click", () => {
+      auth.signInWithPopup(provider).then(() => {
+        document.querySelector(".overlay").style.display = "flex";
+      })
+    })
+
+
+    document.querySelector(".overlay").addEventListener("click", () => {
+      document.querySelector(".overlay").style.display = "none";
+    })
+
+  </script>
+  <script>
+    function updateCountdown() {
+      const targetDate = new Date('August 21, 2023 00:00:00').getTime();
+      const now = new Date().getTime();
+      const timeLeft = targetDate - now;
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      const countdownday = document.getElementById('day');
+      const countdownhour = document.getElementById('hour');
+      const countdownminutes = document.getElementById('minute');
+      const countdownseconds = document.getElementById('second');
+    
+      countdownday.textContent = `${days}`;
+      countdownhour.textContent = ` ${hours}`;
+      countdownminutes.textContent = ` ${minutes}`;
+      countdownseconds.textContent = `${seconds}`;
+
+      if (timeLeft < 0) {
+        clearInterval(interval);
+        countdownElement.textContent = 'Countdown expired!';
+      }
+    }
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+  </script>
+</body>
+
+</html>
