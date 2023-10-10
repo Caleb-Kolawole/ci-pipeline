@@ -2,13 +2,6 @@ a{
     text-decoration: none;
     color: black;
 }
-
-body{
-    background-color: #FFFFFF;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
 .nav{
     display: flex;
     justify-content: space-between;
@@ -22,9 +15,6 @@ body{
     z-index: 200;
 }
 
-.nav img{
-    width: 234px;
-}
 
 .nav .page-links{
     display: flex;
