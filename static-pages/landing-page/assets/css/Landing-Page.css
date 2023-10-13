@@ -15,13 +15,6 @@ a{
     z-index: 200;
 }
 
-
-.nav .page-links{
-    display: flex;
-    gap: 2rem;
-    font-weight: 500;
-}
-
 .nav .auth-links{
     display: flex;
     gap: 2rem;
