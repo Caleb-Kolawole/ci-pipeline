@@ -44,3 +44,22 @@ a {
   font-size: 18px;
   line-height: 30px;
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    background-image: url("../images/mobile-bg.jpg");
+    background-size: cover;
+  }
+  
+  .main p {
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .main h1{
+    line-height: 40px;
+  }
+  .logo p{
+    font-size: 19px;
+  }
+}
