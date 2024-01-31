@@ -3,41 +3,6 @@ a{
     color: black;
 }
 
-body{
-    background-color: #FFFFFF;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 3rem;
-    background-color: #FFFFFF;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    height: 11vh;
-    position: sticky;
-    top: 0;
-    z-index: 200;
-}
-
-.nav img{
-    width: 234px;
-}
-
-.nav .page-links{
-    display: flex;
-    gap: 2rem;
-    font-weight: 500;
-}
-
-.nav .auth-links{
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
 .side-nav {
     position: fixed;
     top: 0;
@@ -46,7 +11,7 @@ body{
     height: 100%;
     background-color: #fafafa;
     color: #000000;
-    transition: left 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     padding-left: 2rem;
@@ -205,11 +170,6 @@ font-weight: 500;
     padding: 1.5rem;
 }
 
-.showcase h1{
-    font-size: 3rem;
-    line-height: 1.1;
-}
-
 .showcase p{
     margin-bottom: 10px;
     max-width: 567px;
@@ -249,19 +209,7 @@ font-weight: 500;
     gap: 8px;
 }
 
-.partners-statistics .icon{
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    background: #e3FFF7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.icon i{
-    color: #088D51;
-}
 
 .why-us-content{
     display: flex !important;
@@ -638,11 +586,6 @@ height: 400px;
 
     .nav-btn{
         display: block;
-    }
-
-    .partners-list, .partners-statistics{
-        width: 80%;
-        flex-wrap: wrap;
     }
 
     .why-us-content{

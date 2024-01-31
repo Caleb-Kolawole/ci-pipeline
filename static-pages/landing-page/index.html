@@ -23,14 +23,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f0bfa4a648.js" crossorigin="anonymous"></script>
     <script src="assets/js/tailwindcss.js"></script>
     <title>TaskFlow Solutions - Dev Company</title>
 
 </head>
 
-<body class="text-black font-[Manrope]">
+<body class="bg-white text-black font-[Manrope] overflow-x-hidden scroll-smooth">
     <div id="register-overlay"></div>
 
     <div id="register-modal">
@@ -77,21 +81,17 @@
         </div>
     </div>
 
-    <div class="nav">
-        <a href="" class="logo max-[800px]:w-[7vw] max-[800px]:justify-start"><img src="assets/images/Taskflow-Icon.svg" /></a>
-        <p class="text-[#156064] max-[800px]:mr-1 font-extrabold max-[800px]:text-[5vw]">TASKFLOW SOLUTIONS</p>
-        <div class="page-links">
-            <a href="">Home</a>
-
-            <a href="/dashboard" id="dash">Dashboard</a>
-            <a href="/product" id="product">Products</a>
+    <div class="flex justify-between items-center sticky max-[1440px]:mt-[2vw]">
+        <a href="" class="max-[800px]:w-[10%]"><img src="/static-pages/landing-page/assets/images/Taskflow-Icon.svg" class="max-[800px]:p-[1vw] max-[800px]:mx-[2.8vw] max-[1440px]:ml-[2vw]"></a>
+        <p class="text-[#156064] max-[800px]:mx-[2vw] max-[800px]:w-[59vw] font-extrabold max-[800px]:text-[5vw] max-[1440px]:mr-[25vw]">TASKFLOW SOLUTIONS</p>
+        <div class="flex gap-[3vw] font-medium max-[800px]:hidden max-[1440px]:mr-[1vw] max-[800px]:w-[100vw] max-[800px]:fixed max-[800px]:h-[1%] max-[800px]:overflow-auto">
             <a href="#why-us">Why Us</a>
-            <a href="#contact">Contact</a>
-            <button id="sign-out-btn">Sign Out</button>
+            <a href="" id="">Solutions</a>
+            <a href="">Resources</a>
+            <a href="#contact">Pricing</a>
         </div>
-        <div class="auth-links" id="login-links">
-            <button class="login">Login</button>
-            <button class="register">Register</button>
+        <div class="" id="">
+            <button class="login max-[1440px]:bg-[#156064] max-[1440px]:px-[3vw] max-[1440px]:mr-[2vw] max-[1440px]:rounded-[2vw] text-white max-[800px]:hidden">Login</button>
         </div>
         <div id="userInitials"></div>
         <div className="profile" id="profile">
@@ -116,324 +116,187 @@
         <a href="#">Register</a>
     </div>
 
-    <div class="showcase">
-        <img src="assets/images/Union-Background.svg" class="max-[800px]:my-2 max-[800px]:pt-[45vw]">
-        <h1 class="text-[#156064]">Building a Bridge between Companies <section class="font-bold">and Technology</h1>
-        <p class="text-black max-[800px]:w-[60vw]">We help businesses transition from analog to digital by building custom software solutions that drive growth.</p>
-        <div class="flex max-[800px]:my-[4vw] mx-auto justify-between">
-            <button class="bg-[#156064] justify-start text-left max-[800px]:p-[2vw] max-[800px]:mx-10"><a class="text-white" href="/product">Get Started</a></button>
-            <button class="bg-white max-[800px]:p-[3vw] pl-[6vw] border-2 mx-1"><a class="text-black" href="/product">Explore</a></button>  
+    <div>
+        <img src="assets/images/Union-Background.svg" class="max-[800px]:my-2 max-[800px]:pt-[15vw] max-[800px]:mx-auto min-[801px]:hidden">
+        <h1 class="text-[#156064] max-[800px]:leading-[9vh] max-[800px]:text-[10vw] max-[800px]:text-center max-[800px]:mx-auto max-[800px]:w-[100vw] max-[800px]:my-[14vw] 
+        max-[1440px]:text-[5vw] min-[801px]:leading-[9vh] max-[1440px]:w-[53vw] max-[1440px]:font-light max-[1440px]:mt-[10vw] max-[1440px]:ml-[6vw]">Building a Bridge between Companies <section class="max-[800px]:font-bold max-[1440px]:font-medium">and Technology</h1>
+        <img src="assets/images/Union-Background.svg" class="max-[1440px]:flex max-[1440px]:float-right max-[1440px]:relative max-[1440px]:bottom-[20vw] max-[1440px]:mr-[1vw] 
+        max-[1440px]:w-[40vw] max-[800px]:hidden">
+        <p class="text-black max-[800px]:w-[80vw] max-[800px]:text-[5vw] max-[800px]:text-center max-[800px]:mx-auto max-[800px]:my-[10vw] max-[1440px]:ml-[6vw] 
+        min-[801px]:w-[33vw] min-[801px]:text-[2vw] max-[1440px]:my-[5vw]">We help businesses transition from analog to digital by building custom software solutions that drive growth.</p>
+        <div class="flex max-[800px]:my-[4vw] mx-auto max-[800px]:justify-center max-[1440px]:ml-[6vw] max-[1440px]:mb-[10vw]">
+            <button class="bg-[#156064] shadow-2xl justify-start text-left max-[800px]:py-[2vw] max-[800px]:px-[30px] max-[800px]:mr-[9vw] max-[1440px]:py-[1vw] max-[1440px]:px-[30px] max-[1440px]:mr-[1.3vw]"><a class="text-white" href="/product">Get Started</a></button>
+            <button class="bg-white border-[#156064] max-[800px]:py-[2vw] max-[800px]:px-[40px] border-[.1vw] max-[1440px]:py-[1vw] max-[1440px]:px-[30px]"><a class="text-[#156064]" href="/product">Explore</a></button>  
         </div>
     </div>
 
-    <div class="max-[800px]:mt-[70vw] bg-[#F1F1F1] justify-center">
-        <p class="text-center max-[800px]:p-[9vw] font-[#031745]">TRUSTED BY COMPANIES</p>
-        <div class="font-[#666666] max-[800px]:inline-flex">
+    <div class="max-[800px]:mt-[40vw] bg-[#F1F1F1] min-[801px]:px-[20vw] min-[801px]:pb-[1vh] min-[801px]:pt-[.6vh] min-[801px]:w-[85vw] min-[801px]:mx-auto justify-center">
+        <p class="min-[801px]:text-center max-[800px]:text-center max-[800px]:p-[9vw] text-[#031745] tracking-[.6vw] font-medium min-[801px]:my-[3vw]">TRUSTED BY COMPANIES</p>
+        <div class="font-[#666666] max-[800px]:inline-flex max-[800px]:w-[100vw] max-[800px]:overflow-x-scroll min-[801px]:flex min-[801px]:justify-between">
             <img src="assets/images/kg-logo.svg" class="">
-            <p>Kayglo Citadel</p>
+            <p class="max-[800px]:w-[100vw]">Kayglo Citadel</p>
             <img src="assets/images/sadok-organics-1.svg">
-            <p>Sadok Organic Farms</p>
+            <p class="max-[800px]:w-[100vw]">Sadok Organic Farms</p>
             <img src="assets/images/famous-pork-1.svg">
-            <p>Famous Pork</p>
+            <p class="max-[800px]:w-[100vw]">Famous Pork</p>
         </div>
     </div>
-    <div>
-        <p class="max-[800px]:text-[14px]  max-[800px]:text-center max-[800px]:mt-[40vw]">OUR SERVICES</p>
-        <p class="max-[800px]:text-[30px]  max-[800px]:text-center max-[800px]:mt-[10vw] max-[800px]:w-[80vw] max-[800px]:m-[9.5vw] font-extrabold">Using The Best Resources to Improve Your Business</p>
+    <div class="min-[801px]:text-center">
+        <p class="max-[800px]:text-[14px] font-bold max-[800px]:text-center max-[800px]:mt-[40vw] min-[801px]:mt-[6vw]">OUR SERVICES</p>
+        <p class="max-[800px]:text-[30px] max-[800px]:text-center max-[800px]:mt-[10vw] max-[800px]:w-[82vw] max-[800px]:mx-auto font-extrabold min-[801px]:text-[3vw] min-[801px]:w-[70vw] min-[801px]:text-center min-[801px]:mx-auto">Using The Best Resources to Improve Your Business</p>
     </div>
     
-        <div class="flex partners-statistics max-[900px]:w-[100vw] mt-[2rem] p-[10vw] max-[800px]:space-between max-[800px]:gap-8 items-center text-center max-[800px]:justify-center">
-            <div class="ps users border-2 rounded-xl p-[12vw]">
-                <div class="rounded-[1vw] max-[800px]:p-[1vw] max-[800px]:w-[10vw] max-[800px]:h-[9vw]  bg-[#ECECEC]"><img src="assets/images/mdi_web.svg"></div>
-                <div class="info">
-                    <h4 class="text-lg font-bold text-left">Web Development</h4>
-                    <p>40 options available</p>
+        <div class="max-[800px]:my-[4vw] max-[800px]:p-[7vw] max-[800px]:w-[90%] max-[800px]:mx-auto">
+            <div class="border-[.1vw] rounded-xl px-[10vw] py-[8vw] flex max-[800px]:my-[5vw]">
+                <div class="mr-[5vw]"><img src="assets/images/mdi_web.svg"></div>
+                <div class>
+                    <h4 class="text-lg font-bold text-left w-[36vw]">Web Development</h4>
+                    <p class="flex">40 options available</p>
                 </div>
             </div>
-            <div class="ps users border-2 rounded-xl p-[12vw]">
-                <div class="rounded-[1vw] max-[800px]:p-[1vw] max-[800px]:w-[10vw] max-[800px]:h-[9vw] bg-[#ECECEC]"><img src="assets/images/vector-pen.svg"></div>
+            <div class="border-[.1vw] rounded-xl px-[10vw] py-[8vw] flex max-[800px]:my-[5vw]">
+                <div class="mr-[5vw]"><img src="assets/images/vector-pen.svg"></div>
                 <div class="info">
-                    <h4 class="text-lg font-bold text-left">UI/UX Development</h4>
-                    <p>13 options available</p>
+                    <h4 class="text-lg font-bold text-left w-[36vw]">UI/UX Development</h4>
+                    <p class="flex">13 options available</p>
                 </div>
             </div>
-            <div class="ps users border-2 rounded-xl p-[12vw]">
-                <div class="rounded-[1vw] max-[800px]:p-[1vw] max-[800px]:w-[10vw] max-[800px]:pb-[9vw] max-[800px]:h-[9vw] bg-[#ECECEC]"><img src="assets/images/ui-checks-grid.svg" class="max-[800px]:w-[14vw]"></div>
+            <div class="border-[.1vw] rounded-xl px-[10vw] py-[8vw] flex max-[800px]:my-[5vw]">
+                <div class="mr-[3vw]"><img src="assets/images/ui-checks-grid.svg" class="max-[800px]:w-[7vw]"></div>
                 <div class="info">
-                    <h4 class="text-lg font-bold text-left">Automation & Workflow Systems</h4>
+                    <h4 class="text-lg font-bold text-left w-[30vw]">Automation & Workflow Systems</h4>
+                    <p class="flex">30 options available</p>
+                </div>
+            </div>
+            <div class="border-[.1vw] rounded-xl px-[10vw] py-[8vw] flex max-[800px]:my-[5vw]">
+                <div class="mr-[5vw]"><img src="assets/images/solar_database-bold-duotone.svg"></div>
+                <div class="info">
+                    <h4 class="text-lg font-bold text-left w-[36vw]">Database Management</h4>
                     <p>30 options available</p>
                 </div>
             </div>
-            <div class="ps users border-2 rounded-xl p-[12vw]">
-                <div class="rounded-[1vw] max-[800px]:p-[1vw] max-[800px]:w-[10vw] max-[800px]:h-[9vw] bg-[#ECECEC]"><img src="assets/images/solar_database-bold-duotone.svg"></div>
+            <div class="border-[.1vw] rounded-xl p-[10vw] flex max-[800px]:my-[5vw]">
+                <div class="mr-[3vw]"><img src="assets/images/nimbus_marketing.svg"></div>
                 <div class="info">
-                    <h4 class="text-lg font-bold text-left">Database Management</h4>
-                    <p>30 options available</p>
-                </div>
-            </div>
-            <div class="ps users border-2 rounded-xl p-[12vw]">
-                <div class="rounded-[1vw] max-[800px]:p-[1vw] max-[800px]:w-[10vw] max-[800px]:h-[9vw] bg-[#ECECEC]"><img src="assets/images/nimbus_marketing.svg"></div>
-                <div class="info">
-                    <h4 class="text-lg font-bold text-left">SEO & Marketing</h4>
+                    <h4 class="text-lg font-bold text-left w-[36vw]">SEO & Marketing</h4>
                     <p>30 options available</p>
                 </div>
         </div>
-        <div class="ps users border-2 rounded-xl w-[80vw] p-[12vw] bg-[#156064] text-white text-center">
-            <div class="info">
+        <div class="flex rounded-xl w-[40vw] max-[800px]:w-[67vw] px-[10vw] py-[10vw] bg-[#156064] text-white text-center">
+            <div class="text-center">
                 <h4 class="text-lg font-bold text-left text-white">More Options</h4>
                 <p class="flex">7+ options available</p>
             </div>
     </div>
 
-    <div class="bg-[#F8FAFD] max-[800px]:mt-[16vw] max-[800px]:p-[13vw]" id="why-us">
-        <p class="rounded-md bg-[#E6F0FA] max-[800px]:font-[20px] p-[4vw] text-[#8599AA] font-medium">Our Latest Project</p>
+    <div class="bg-[#F8FAFD] max-[800px]:mt-[16vw] pt-[1vw]">
+        <p class="flex justify-center text-center max-[800px]:mx-auto rounded-md bg-[#E6F0FA] max-[800px]:font-[20px] py-[4vw] px-[1px] max-[800px]:w-[40vw] max-[800px]:mt-[35vw] text-[#8599AA] font-medium">Our Latest Project</p>
 
-        <div class="max-w-4xl why-us-content">
-            <p class="max-[800px]:text-[29px] font-extrabold max-[800px]:mt-[5vw]">Project Delta</p>
-            <p class="max-[800px]:w-[87vw]">Multiple listening columns help you stay tuned to everything that's relevant. 
+        <div class="max-[800px]:text-center">
+            <p class="max-[800px]:text-[29px] font-extrabold max-[800px]:mt-[14vw]">Project Delta</p>
+            <p class="max-[800px]:w-[60vw] max-[800px]:mt-[10vw] text-[#828282] max-[800px]:mx-auto">Multiple listening columns help you stay tuned to everything that's relevant. 
                 Respond in real-time and engage with your audience as often as you like.</p>
-
-    <div class="feature-section">
-        <h1 class="mt-6 text-center sm:text-lg md:text-3xl">Key Features</h1>
-        <div class="features">
-            <div class="grid grid-cols-2 featureItem">
-                <div class="featureText">
-                    <h2 class="">Renewable and Reliable Power Supply </h2>
-                    <p class="first-one">Solar energy is a sustainable source of energy because it is derived from the
-                        sun, which is a virtually limitless resource.
-                    </p>
-                </div>
-                <div>
-                    <div class="featureImage">
-                        <img class="house" src="./assets/images/Reliable Energy.png" alt="">
-                    </div>
-                </div>
-
-            </div>
-            <div class="grid grid-cols-2 featureItem">
-                <div>
-                    <div class="featureImage">
-                        <img src="./assets/images/Savings-bro 1.png" alt="">
-
-                    </div>
-                </div>
-
-                <div class="featureText">
-                    <h2>Cost-Effective</h2>
-                    <p>Solar energy can be a cost-effective source of energy, particularly in areas with abundant
-                        sunshine, as it requires little to no fuel to generate electricity and has minimal ongoing
-                        maintenance costs.</p>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 featureItem">
-                <div class="featureText">
-                    <h2>Clean energy </h2>
-                    <p>Solar energy is a clean and non-polluting source of energy, as it does not emit any harmful
-                        greenhouse gases or pollutants during the generation process.</p>
-                </div>
-                <div>
-                    <div class="featureImage">
-                        <img src="./assets/images/Air pollution-amico 1.png" alt="">
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="grid grid-cols-2 featureItem">
-                <div>
-                    <div class="featureImage">
-                        <img src="./assets/images/Sun energy-pana 1.png" alt="">
-                    </div>
-                </div>
-
-                <div class="featureText">
-                    <h2>Product Maintenance</h2>
-                    <p>Solar energy can be used in a variety of applications, including residential, commercial, and
-                        industrial settings, as well as in off-grid applications such as remote homes and vehicles.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section id="about">
-        <div class="about">
-            <div class="about-header">
-                <h1 class="my-20 font-bold text-center sm:text-lg md:text-3xl">About Us</h1>
-            </div>
-
-            <div class="grid grid-cols-2 para">
-                <!-- <<<<<<< Updated upstream:landing-Page/Landing-page-key-feautres-section/index.html -->
-                <div data-aos="fade-up-right" class="order-1">
-                    <div class="order-1 text-lg font-medium about-text">
-                        <p>Welcome to <span> Kayglo Citadel</span>, where we provide top-notch solar solutions to
-                            residential and commercial clients. Our company was founded on the belief that sustainable
-                            energy is the future, and we strive to make a positive impact on the environment by helping
-                            our clients reduce their carbon footprint.</p>
-                        <p>At Kayglo Citadel, we are dedicated to providing our clients with the highest quality solar
-                            products and services. Our team of experts has years of experience in the solar industry,
-                            and we pride ourselves on our commitment to customer satisfaction.</p>
-                        <p>We offer a wide range of solar solutions, including solar panel installation, maintenance,
-                            and repair. Our team works closely with clients to design customized solar systems that meet
-                            their unique energy needs and budget.</p>
-                    </div>
-                </div>
-                <div class="order-2 about-image">
-                    <img class="image-one" src="./assets/images/Polygon 4.png" alt="">
-                    <!-- >>>>>>> Stashed changes:Landing-page/Landing-page:key feautres section/index.html -->
-                    <div class="flex justify-between">
-                        <img class="image-two" src="./assets/images/Polygon 5.png" alt="">
-                        <img class="image-three" src="./assets/images/Polygon 6.png" alt="">
-                    </div>
-                    <img class="image-four" src="./assets/images/Polygon 7.png" alt="">
-                </div>
-
-                <img src="./assets/images/shapes.png" class="about-sm" />
-            </div>
-
-
         </div>
 
-    </section>
-
-    <section class="p-4 redirect-product">
-        <div class="max-w-lg mx-auto mb-4 redirect-productText">
-            <h2 class="mb-4 text-4xl font-bold">See which <span>system</span> works for your best for you</h2>
-            <p>Use our load calculator to understand the amout of power you consume and which inverter system would work
-                best for you</p>
+        <div class="">
+            <button class="bg-[#00747A] py-[3vw] px-[7vw] rounded-lg max-[800px]:mt-[10vw] flex max-[800px]:mx-auto max-[800px]:mb-[19vw]"><a href="" class="text-white">Read More</a></button>
         </div>
         <div>
-            <img src="./assets/images/Product Preview 2.png" alt="">
+            <video src="./assets/images/DEKU VS NARUTO RAP BATTLE _ RUSTAGE ft None Like Joshua ( 480 X 854 ).mp4" controls class="bg-[../landing-page/assets/images/Video-Image.svg]"><button></button></video>
         </div>
-        <div class="redirect-btn">
-            <a href="">Browse Product Page</a>
+        <div>
+            <p class="max-[800px]:text-[3vw] max-[800px]:text-[#3734A9] font-black">TESTIMONIALS</p>
+            <p class="font-black text-[6vw] max-[800px]:w-[100vw] max-[800px]:mx-auto">Check what our clients are saying</p>
+            <img src="./assets/images/testimonial-61.svg" class="max-[800px]:mx-auto">
+            <img src="./assets/images/zig-zag.svg" class="max-[800px]:mx-auto max-[800px]:my-[3vw]">
+            <img src="./assets/images/“.svg" class="max-[800px]:mx-auto max-[800px]:my-[3vw]">
+            <img src="./assets/images/5-stars.svg" class="max-[800px]:mx-auto max-[800px]:my-[7vw]">
+            <p class="flex text-[#1B1C31] font-bold max-[800px]:w-[70vw] max-[800px]:mx-auto max-[800px]:text-center">Taskflow transformed our company. Their software solution improved our efficiency, allowing us to focus on growth.</p>
+            <p class="flex font-bold max-[800px]:w-[30vw] max-[800px]:mx-auto max-[800px]:text-center max-[800px]:mt-[10vw] max-[800px]:mb-[8vw]">Solomon Kolawole</p>
+            <div class="flex max-[800px]:mx-auto">
+                <img src="./assets/images/kg-logo.svg" class="flex max-[800px]:bottom-[4vw] max-[800px]:relative max-[800px]:ml-[19vw]">
+                <p class="flex max-[800px]:float-right max-[800px]:bottom-[2vw] max-[800px]:relative max-[800px]:mr-[10vw]">Kayglo Citadel</p>
+            </div>
         </div>
-
-
-    </section>
-
-    <section class="FAQ">
-        <div class="FAQ-header">
-            <h1 class="my-8 text-3xl font-bold">Frequently Asked Questions</h1>
-        </div>
-        <div class="flex  justify-around pb-10 mt-20 align-middle FAQ-sec">
+        <div>
+            <p class="flex text-[#2C3847] font-semibold text-[5vw] max-[800px]:mx-auto max-[800px]:justify-center">Meet Our Team</p>
+            <p class="max-[800px]:text-center max-[800px]:mx-auto max-[800px]:my-[5vw] max-[800px]:w-[45vw]">Our dedicated team of experts is passionate about driving digital transformation and delivering exceptional results.</p>
+            <img src="/static-pages/landing-page/assets/images/Devpix.svg">
+            <div class="flex max-[800px]:w-[30vw]">
+                <p>Solomon Kolawole</p>
+                <p>The Boss</p>
+                <img src="/static-pages/landing-page/assets/images/Devpix.svg">
+                <p>Caleb Kolawole</p>
+                <p>Full Stack Developer</p>
+                <img src="/static-pages/landing-page/assets/images/Devpix.svg">
+                <p>Obichukwu Joy</p>
+                <p>Back End Developer</p>
+                <img src="/static-pages/landing-page/assets/images/Devpix.svg">
+                <p>Japhet Kojo</p>
+                <p>Project Manager</p>
+                <img src="/static-pages/landing-page/assets/images/Devpix.svg">
+                <p>Tari Namipkor</p>
+                <p>Front End Developer</p>
+                <img src="/static-pages/landing-page/assets/images/Devpix.svg">
+                <p>Frank Arimoro</p>
+                <p>Front End Developer</p>
+            </div>
             <div>
-                <img src="./assets/images/FAQs-amico 1.png" class="w-96">
+                <p>Frequently Asked Questions</p> <!--Do this section javascript-->
             </div>
-            <div class="py-2 overflow-y-scroll faq-content">
-                <div class="FAQ-text">
-                    <div class="flex justify-between text">
-                        <h1>How can Taskflow improve collaboration?</h1><button class="add-b"><i
-                                class="fa-solid fa-plus "></i></button>
-                    </div>
-                    <p id="first-text">TaskFlow improves collaboration by allowing team members to work together more
-                        efficiently. It provides transparency and accountability by showing who is responsible for each
-                        task, and it enables team members to easily communicate and collaborate on tasks.</p>
-                </div>
-                <div class="FAQ-text">
-                    <div class="flex justify-between text">
-                        <h1>How can Taskflow improve collaboration?</h1><button class="add-bt"><i
-                                class="fa-solid fa-plus "></i></button>
-                    </div>
-                    <p id="second-text">TaskFlow improves collaboration by allowing team members to work together more
-                        efficiently. It provides transparency and accountability by showing who is responsible for each
-                        task, and it enables team members to easily communicate and collaborate on tasks.</p>
-                    <!-- <p></p>  -->
-                </div>
-                <div class="FAQ-text">
-                    <div class="flex justify-between text">
-                        <h1>How can Taskflow improve collaboration?</h1><button class="add-btns"><i
-                                class="fa-solid fa-plus "></i></button>
-                    </div>
-                    <p id="third-text">TaskFlow improves collaboration by allowing team members to work together more
-                        efficiently. It provides transparency and accountability by showing who is responsible for each
-                        task, and it enables team members to easily communicate and collaborate on tasks.</p>
-                    <!-- <p ></p> -->
-                </div>
-                <div class="FAQ-text">
-                    <div class="flex justify-between text">
-                        <h1>How can Taskflow improve collaboration?</h1><button class="add-btn"><i
-                                class="fa-solid fa-plus "></i></button>
-                    </div>
-                    <p id="last-text">TaskFlow improves collaboration by allowing team members to work together more
-                        efficiently. It provides transparency and accountability by showing who is responsible for each
-                        task, and it enables team members to easily communicate and collaborate on tasks.</p>
-                </div>
+            <div>
+                <p>WE'D LOVE TO HEAR FROM YOU</p>
+                <div class="p-[1vw] bg-black"></div> <!--Fix to small orange div ASO Figma-->
+                <p>Get in touch with us to discuss how we can help your business thrive in the digital era.</p>
             </div>
-        </div>
-    </section>
-    <!-- <section id="contact">
-        <div>
-            <div class="contact-header">
-                <h2>Contact Us</h2>
-                <h5>Any Questions or Remarks? Just Write to us!</h5>
-            </div>
-            <div class="flex contact-form ">
-                <div class="contactInfoText">
-                    <h2>Contact Information</h2>
-                    <h5>Fill in the forms and our team will get back to you within 24hrs</h5>
-                    <div class="contactInfo">
-                        <div class="flex"><i class="fa-solid fa-phone"></i> <p>+2348 0987 65432</p></div>
-                        <div class="flex "><i class="fa-solid fa-envelope"></i><p>kayglocitadel@gmail.com</p></div>
-                        <div class="flex"><i class="fa-solid fa-location-dot"></i><p>10, Lorem Amet Street</p></div>
-                    </div>
-                    <div class="flex contact-social">
-                        <div class="flex contact-socials">
-                            <img src="/Landing-page/Landing-page-key-feautres-section/asset/images/Vector.png" alt="">
-                            <img src="/Landing-page/Landing-page-key-feautres-section/asset/images/twitter.png" alt="">
-                            <img src="/Landing-page/Landing-page-key-feautres-section/asset/images/ig.png" alt="">
-                            <img src="/Landing-page/Landing-page-key-feautres-section/asset/images/Ldkn.png" alt="">
-                        </div>
-                        
-                        <div class="shapes">
-                            <img class="circle" src="/Landing-page/Landing-page-key-feautres-section/asset/images/Ellipse 36.png" alt="">
-                            <img class="one" src="/Landing-page/Landing-page-key-feautres-section/asset/images/Ellipse 35.png" alt="">
-                        </div>
-                    </div>
-                   
-                </div>
-                <form action="#" class="flex flex-wrap">
-                  <label for="fname">First Name<input type="text" id="fname"></label>
-                  
-                  <label for="lname">Last Name <input type="text" id="lname"></label>
-                 
-                  <label for="mail">Mail <input type="text" id="mail"></label>
-                 
-                  <label for="phone">Phone  <input type="text" id="phone"></label>
-                
-                  <label for="msg">Message<input type="textarea" id="msg"></label>
-                  
-                  <input type="submit" value="Send Message">
-    
+            <div>
+                <form action="push"><!--Do the form-->
+
                 </form>
-    
+            </div>
+            <div>
+                <img src="">
+                <p>See how Taskflow Solutions works for your business</p>
+                <p>At TaskFlow Solutions, we believe in collaboration to deliver exceptional results for your business. 
+                    When you partner with us, you'll experience a seamless process that understands your unique needs and provides tailored solutions. 
+                    Our team works closely with you, actively listening and customizing our services to align with your goals. We combine technical skills, 
+                    creative expertise, and industry knowledge to develop websites, apps, and cutting-edge technologies. Throughout the process, 
+                    we value your feedback and ensure open communication. Together, we'll bring your business into the technology era, 
+                    enhancing your online presence and generating value for your organization..</p>
             </div>
         </div>
-    
-    </section> -->
-
-    <div class="grid grid-cols-3 gap-8 p-20 bg-green-50 footer">
-        <div class="logo-sec"><img src="./assets/images/Logo.svg" class="w-72" /></div>
-        <div class="link link1">
-            <h3 class="text-lg font-bold text-gray-400">Products</h3>
-            <a href="">Why kayglo citadel</a>
-            <a href="">Integrations</a>
-            <a href="">Load calculator</a>
-            <a href="">Support</a>
+    <footer class="">
+        <div>
+            <p>TaskFlow Solutions</p>
+            <p>We specialize in building custom software solutions that enable companies to transition from analog ways of doing things to innovative digital strategies, 
+            driving growth and success.</p>
         </div>
-        <div class="link link2">
-            <h3 class="text-lg font-bold text-gray-400">Solutions</h3>
-            <a href="">Marketing</a>
-            <a href="">Sales</a>
-            <a href="">Finance</a>
-            <a href="">Operations</a>
+        <div>
+            <p>About</p>
+            <a href="">Home</a>
+            <a href="">Features</a>
+            <a href="">FAQs</a>
+            <a href="">Reviews</a>
+            <a href="">Stories</a>
         </div>
-    </div>
-
-    <div class="p-4 text-center powered">
-        <h3 class="mb-2">© 2023 - Kayglo Citadel. All Rights Reserved</h3>
-        <p>Powered by <a href="http://www.taskflowsolution.com" target="_blank"
-                class="text-lg font-bold text-blue-700">TaskFlow Solutions</a></p>
-    </div>
+        <div>
+            <p>Contact Us</p>
+            <a href="">+234 802 345 6789</a>
+            <a href="">taskflow@gmail.com</a>
+        </div>
+        <div>
+            <a href=""><img src=""></a>
+            <a href=""><img src=""></a>
+            <a href=""><img src=""></a>
+            <a href=""><img src=""></a>
+        </div>
+        <div class="p-[1vw] bg-black"></div>
+        <div>
+            <p>© Copyright 2023. TaskFlow Solutions All rights reserved.</p>
+            <a href="">Contact Us</a>
+            <a href="">Terms</a>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
