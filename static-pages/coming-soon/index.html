@@ -6,11 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <script src="./assets/js/tailwindcss.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDRHWTaYbaS01ZRyQjp-6Sdz0txLBAOpoQ",
+            authDomain: "work-flow-engine.firebaseapp.com",
+            projectId: "work-flow-engine",
+            storageBucket: "work-flow-engine.appspot.com",
+            messagingSenderId: "397962480634",
+            appId: "1:397962480634:web:307add4c9dc07dc1ed3243",
+            measurementId: "G-7RNH9LJ4WL"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const emailForm = document.getElementById('emailForm');
+            emailForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const email = document.getElementById('email').value;
+                db.collection('emails').add({
+                    email: email,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                })
+                .then(function () {
+                    alert("Email saved successfully!! You'll be notified when our website is live 👍");
+                })
+                .catch(function (error) {
+                    console.error('Error adding email: ', error);
+                });
+                document.getElementById('email').value = '';
+            });
+        });
+    </script>
+
 </head>
 
 <body class="overflow-x-hidden m-0">
@@ -23,9 +62,11 @@
             <h1 class="text-[#EBEBEB] text-5xl font-extrabold max-[500px]:text-center max-[500px]:text-3xl">We are <br>Coming Soon.</h1>
             <p class="text-[#CCC] my-5 max-[500px]:text-center max-[500px]:mx-auto">We aim to help businesses transition from analog to digital by building custom software solutions that drive growth.</p>
             <div class="min-[500px]:w-96 max-[500px]:max-w-[320px] max-[500px]:mx-auto">
-                <label for="email">Email:</label>
-                <input type="email" placeholder="caleb@gmail.com" required class=" w-full rounded-lg justify-center border-solid border-white border-[2px] bg-transparent p-3 h-14 mt-2">
-                <button type="submit" class="mt-6 w-full justify-center bg-white rounded-xl p-4 text-black text-center font-bold">Subscribe</button>
+                <form id="emailForm" action="javascript:void(0);" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="caleb@gmail.com" required class=" w-full rounded-lg justify-center border-solid border-white border-[2px] bg-transparent p-3 h-14 mt-2">
+                    <button type="submit" class="mt-6 w-full justify-center bg-white rounded-xl p-4 text-black text-center font-bold">Subscribe</button>
+                </form>
             </div> 
         </div>
         <div class="flex justify-between mt-8 items-center max-[500px]:flex-col max-[500px]:items-center gap-8">
